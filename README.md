@@ -14,6 +14,15 @@ Clone el repositorio, muévase a el con `cd`
 
 Esto instalará dichos paquetes y todas sus dependencias en la carpeta node_modules/
 
+#### Uso de variables de entorno:
+
+En el servidor se utilizan variables de entorno por medio del paquete `dotenv`, por lo que tendrán que crear un archivo en el directorio raíz llamado `.env`, en donde guarden las siguientes variables de la siguiente manera:
+
+```bash
+PORT=puerto-que-deseen-usar
+MONGO_URI=url-de-la-base-de-datos
+```
+
 #### Para ejecutar la aplicación:
 
 ```bash
@@ -52,8 +61,8 @@ También verá cualquier error en la consola.
 | Parameter  | Type     | Description    |
 | :--------- | :------- | :------------- |
 | `nombre`   | `String` | **Requerido**. |
-| `cedula`   | `Number` | **Requerido**. |
-| `telefono` | `Number` | **Requerido**. |
+| `cedula`   | `String` | **Requerido**. |
+| `telefono` | `String` | **Requerido**. |
 
 #### Get Adoptantes
 
@@ -64,9 +73,9 @@ También verá cualquier error en la consola.
 | Parameter   | Type     | Description    |
 | :---------- | :------- | :------------- |
 | `nombre`    | `String` | **Requerido**. |
-| `cedula`    | `Number` | **Requerido**. |
+| `cedula`    | `String` | **Requerido**. |
 | `direccion` | `String` | **Requerido**. |
-| `telefono`  | `Number` | **Requerido**. |
+| `telefono`  | `String` | **Requerido**. |
 
 #### Get Detalle de adopción
 
@@ -77,8 +86,8 @@ También verá cualquier error en la consola.
 | Parameter         | Type                      | Description    |
 | :---------------- | :------------------------ | :------------- |
 | `fecha`           | `Date`                    | **Requerido**. |
-| `cedulaAdoptante` | `Number`                  | **Requerido**. |
-| `cedulaEncargado` | `Number`                  | **Requerido**. |
+| `cedulaAdoptante` | `String`                  | **Requerido**. |
+| `cedulaEncargado` | `String`                  | **Requerido**. |
 | `codigoMascota`   | `String`                  | **Requerido**. |
 | `IdAdoptante`     | `mongoose.Types.ObjectId` | **Requerido**. |
 | `IdEncargado`     | `mongoose.Types.ObjectId` | **Requerido**. |

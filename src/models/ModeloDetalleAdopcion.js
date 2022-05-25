@@ -3,8 +3,8 @@ const { Schema } = mongoose;
 
 const DetalleAdopcionShema = new Schema({
   fecha: { type: Date, required: true },
-  cedulaAdoptante: { type: Number, required: true },
-  cedulaEncargado: { type: Number, required: true },
+  cedulaAdoptante: { type: String, required: true },
+  cedulaEncargado: { type: String, required: true },
   codigoMascota: { type: String, required: true },
   IdAdoptante: {
     type: mongoose.Types.ObjectId,

@@ -1,0 +1,66 @@
+###Traer Datos de los Encargados
+GET http://localhost:4000/api/encargado HTTP/1.1
+
+###Traer Datos de las Mascotas
+GET http://localhost:4000/api/mascota HTTP/1.1
+
+###Traer Datos de los Adoptantes
+GET http://localhost:4000/api/adoptantes HTTP/1.1
+
+###Traer datos de el Detalle de adopcion
+GET http://localhost:4000/api/detalleAdopcion HTTP/1.1
+
+
+
+
+
+###AGREGAR (POST)
+
+### Agregar Encargados
+POST http://localhost:4000/api/encargado HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Anthony Giler",
+    "cedula": "1325689521",
+    "telefono": "0965231428"
+}
+
+### Agregar Mascotas
+POST http://localhost:4000/api/mascota HTTP/1.1
+Content-Type: application/json
+
+{
+    "identificacion": "P003",
+    "nombre": "Arqui",
+    "raza": "pug",
+    "edad": "10 meses",
+    "condiciones": "buen estado",
+    "descripcion": "pequeño color cafe",
+    "IdAdoptante": "628e7275dd5eb56f871245ce"
+}
+
+### Agregar Adoptantes
+POST http://localhost:4000/api/adoptantes HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Mayra Aveiga",
+    "cedula": "1325693212",
+    "direccion": "El prado, Manta",
+    "telefono": "0965232014"
+}
+
+### Agregar Detalle de Adopciones
+POST http://localhost:4000/api/detalleAdopcion HTTP/1.1
+Content-Type: application/json
+
+{
+    "fecha": "2022-05-25",
+    "cedulaAdoptante": "1314562589",
+    "cedulaEncargado": "1325689521",
+    "codigoMascota": "P003",
+    "IdAdoptante":"628e7275dd5eb56f871245ce",
+    "IdEncargado": "628e89d57a60e05a59a7cc08",
+    "IdMascota":"628e8a7b7a60e05a59a7cc13"
+}
