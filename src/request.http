@@ -1,14 +1,33 @@
 ###Traer Datos de los Encargados
 GET http://localhost:4000/api/encargado HTTP/1.1
 
+###Traer Datos de un solo Encargado
+GET http://localhost:4000/api/encargado/628e89d57a60e05a59a7cc08 HTTP/1.1
+
+
+
 ###Traer Datos de las Mascotas
 GET http://localhost:4000/api/mascota HTTP/1.1
+
+###Traer Datos de una Mascota
+GET http://localhost:4000/api/mascota/628e8a7b7a60e05a59a7cc13 HTTP/1.1
+
+
 
 ###Traer Datos de los Adoptantes
 GET http://localhost:4000/api/adoptantes HTTP/1.1
 
-###Traer datos de el Detalle de adopcion
+###Traer Datos de un solo Adoptante
+GET http://localhost:4000/api/adoptantes/628e7275dd5eb56f871245ce HTTP/1.1
+
+
+
+###Traer datos de los Detalles de adopciones
 GET http://localhost:4000/api/detalleAdopcion HTTP/1.1
+
+###Traer datos de un Detalle de adopcion
+GET http://localhost:4000/api/detalleAdopcion/628e8bea7a60e05a59a7cc28 HTTP/1.1
+
 
 
 
@@ -64,3 +83,22 @@ Content-Type: application/json
     "IdEncargado": "628e89d57a60e05a59a7cc08",
     "IdMascota":"628e8a7b7a60e05a59a7cc13"
 }
+
+
+
+
+###ACTUALIZAR (PUT)
+PUT http://localhost:4000/api/adoptantes/628e7275dd5eb56f871245ce HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Mayra Aveiga",
+    "cedula": "1325693212",
+    "direccion": "la pradera, Manta",
+    "telefono": "0965232014"
+}
+
+
+
+###ELIMINAR (DELETE)
+DELETE http://localhost:4000/api/adoptantes/628e98df30d57aa4d685be41 HTTP/1.1
