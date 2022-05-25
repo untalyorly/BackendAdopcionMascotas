@@ -3,23 +3,23 @@ const { Schema } = mongoose;
 
 const DetalleAdopcionShema = new Schema({
   fecha: { type: Date, required: true },
-  cedulaAdoptante: { type: String, required: true },
-  cedulaEncargado: { type: String, required: true },
+  cedulaAdoptante: { type: Number, required: true },
+  cedulaEncargado: { type: Number, required: true },
   codigoMascota: { type: String, required: true },
   IdAdoptante: {
     type: mongoose.Types.ObjectId,
     ref: "Adoptantes",
-    required: false,
+    required: true,
   },
   IdEncargado: {
     type: mongoose.Types.ObjectId,
     ref: "Encargado",
-    required: false,
+    required: true,
   },
   IdMascota: {
     type: mongoose.Types.ObjectId,
     ref: "Mascota",
-    required: false,
+    required: true,
   },
 });
 
