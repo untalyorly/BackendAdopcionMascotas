@@ -92,3 +92,11 @@ También verá cualquier error en la consola.
 | `IdAdoptante`     | `mongoose.Types.ObjectId` | **Requerido**. |
 | `IdEncargado`     | `mongoose.Types.ObjectId` | **Requerido**. |
 | `IdMascota`       | `mongoose.Types.ObjectId` | **Requerido**. |
+
+#### Instalar Extencion vscode
+
+Instalr Extencion para usar request.http
+
+```bash
+  REST Client
+```
